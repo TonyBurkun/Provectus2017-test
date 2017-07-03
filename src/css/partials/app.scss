@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/proxima_nova_semibold-webfont.woff2') format('woff2'),
+       url('../fonts/proxima_nova_semibold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+*{
+  outline: none;
+}
+
+body{
+  font-size: $base-font-size;
+  font-family: $base-font;
+}
+
+.btn{
+  display: block;
+  border-radius: 6px;
+  background-color: $btn-background;
+  color: #fff;
+  font-size: 1.25em;
+  font-weight: 600;
+  line-height: 65px;
+  text-align: center;
+}
+
+a{
+  &:hover,
+  &:active,
+  &:focus{
+    text-decoration: none;
+  }
+}
+
+.header-block{
+  position: relative;
+  background: linear-gradient(to top, rgba(0,0,0, 0) 70%, rgba(0,0,0, 0.8) 120%), url("../img/header-grid-image.jpg");
+  height: 499px;
+}
+
+.instagram-link{
+  position: absolute;
+  top: 16px;
+  right: 22px;
+  display: block;
+  color: #fff;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 600;
+  line-height: 24px;
+  background: url("../img/instagram.svg") no-repeat;
+  padding-left: 26px;
+
+  &:hover,
+  &:active,
+  &:focus{
+    color: #fff;
+  }
+}
+
+.navigation{
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.11);
+  padding-top: 45px;
+  padding-bottom: 40px;
+  z-index: 1;
+
+  li{
+    display: inline-block;
+    font-size: 1.25em;
+    font-weight: 600;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-left: 78px;
+
+    @media (max-width: 640px) {
+      display: block;
+      margin-left: 0;
+      margin-bottom: 40px;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+
+    a{
+      color: #2e2e2e;
+
+      &:hover,
+      &:active,
+      &:focus{
+        color: #2e2e2e;
+      }
+    }
+
+    &:first-child{
+      margin-left: 0;
+    }
+
+  }
+}
+
+
+.intro-block{
+  background: #fbfafa;
+  padding-top: 115px;
+  padding-bottom: 175px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  .hd-icon{
+    display: block;
+    background: url("../img/hotdog.svg") no-repeat;
+    width: 93px;
+    height: 93px;
+    margin: 0 auto;
+  }
+
+  h1{
+    color: $title-color;
+    font-size: 3.5em;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 36px;
+    margin-bottom: 80px;
+  }
+
+  .btn{
+    width: 310px;
+    margin: 0 auto;
+
+
+    &:hover,
+    &:active,
+    &:focus{
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+}
+
+.post{
+
+  &__desc-side{
+    display: flex;
+    min-height: 576px;
+  }
+
+  &__container{
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 24%;
+    padding-right: 24%;
+
+    &__title{
+      position: relative;
+      color: $title-color;
+      font-size: 1.5em;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 32px;
+
+      &::before{
+        position: absolute;
+        display: block;
+        content: '';
+        left: -52px;
+        top: 50%;
+        margin-top: -1px;
+        width: 31px;
+        height: 2px;
+        background-color: $btn-background;
+      }
+    }
+
+    &__text{
+      color: $title-color;
+      font-size: 1.125em;
+      font-weight: 300;
+      line-height: 24px;
+      margin-top: 0;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__img-side{
+    background-size: cover;
+    height: 576px;
+
+    &--all{
+      background: url("../img/all-hotdogs.jpg") no-repeat center;
+      background-size: cover;
+    }
+
+    &--vegan{
+      background: url("../img/vegan.jpg") no-repeat center;
+      background-size: cover;
+    }
+
+    &--vegitarian{
+      background: url("../img/vegitarian.jpg") no-repeat center;
+      background-size: cover;
+    }
+  }
+}
+
+footer{
+  width: 100%;
+  overflow: hidden;
+  background-color: #efefef;
+  color: $title-color;
+  font-size: 0.875em;
+  font-weight: 400;
+  line-height: 24px;
+  padding-top: 35px;
+  padding-bottom: 26px;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  .copyright{
+
+    @media (max-width: 991px) {
+      text-align: center;
+    }
+  }
+
+  .footer-nav{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: right;
+
+    @media (max-width: 991px) {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    li{
+      position: relative;
+      display: inline-block;
+      margin-left: 20px;
+      margin-right: 20px;
+
+      a{
+        color: $title-color;
+
+        &:hover,
+        &:active,
+        &:focus{
+          color: $title-color;
+        }
+      }
+
+      &:before{
+        position: absolute;
+        right: -19px;
+        top: 50%;
+        margin-top: -7px;
+        display: block;
+        content: '';
+        width: 2px;
+        height: 15px;
+        background: #a2a3a4;
+      }
+
+      &:last-child{
+        margin-right: 0;
+
+        &:before{
+          display: none;
+        }
+      }
+
+      @media (max-width: 600px){
+        display: block;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 15px;
+
+        &:before{
+          display: none;
+        }
+      }
+    }
+  }
+}

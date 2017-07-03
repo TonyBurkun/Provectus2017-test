@@ -1,0 +1,19 @@
+{
+  "name": "provectus-test",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Tony <burkun.anton@gmail.com>"
+  ],
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "^7.0.0"
+  }
+}
